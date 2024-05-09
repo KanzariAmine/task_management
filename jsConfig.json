@@ -4,8 +4,8 @@
     
     // "@/*": ["./src/*"],
     "@pages/*": ["./pages/*"],
-    "@components/*": ["src/components/*"],
-    "@assets/*": ["src/assets/*"]
+    "@components/*": ["./components/*"],
+    "@assets/*": ["./assets/*"]
     // "@forms/*": ["src/forms/*"],
     // "@providers/*": ["src/providers/*"],
     // "@utils/*": ["src/utils/*"]
