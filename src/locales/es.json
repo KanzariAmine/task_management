@@ -1,0 +1,13 @@
+{
+  "translation":{
+    "welcome_msg": "¡Bienvenido de nuevo!",
+    "app_description": "Mantenga todas sus credenciales seguras.",
+    "app_title": "Gestiona todas tus tareas en un solo lugar",
+    "forget_password": "Olvidaste tu contraseña?",
+    "email": "Dirección de correo electrónico",
+    "password": "Contraseña",
+    "email_required": "Se requiere una dirección de correo electrónico",
+    "password_required": "Se requiere contraseña",
+    "placeholder_password":"Contraseña"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "translation":{
+    "welcome_msg": "Welcome Back!",
+    "app_description": "Keep all your credential safe",
+    "app_title": "Manage all your task in one Place",
+    "forget_password": "Forget Password?",
+    "login_btn": "Log in",
+    "email": "Email Address",
+    "password": "Password",
+    "email_required": "Email Address is required",
+    "password_required": "Password is required",
+    "placeholder_password":"your password"
+    
+  }
+}
