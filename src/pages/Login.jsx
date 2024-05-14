@@ -6,10 +6,12 @@ import Textbox from '@components/Textbox';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const user = '';
+  const user = useSelector((state) => state.auth);
+  console.log('USER', user);
   const {
     register,
     handleSubmit,
