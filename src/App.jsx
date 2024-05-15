@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+import Sidebar from '@components/Sidebar';
 import Dashboard from '@pages/Dashboard';
 import Login from '@pages/Login';
 import TaskDetails from '@pages/TaskDetails';
@@ -11,11 +12,14 @@ import { Toaster } from 'sonner';
 
 function Layout() {
   const { user } = useSelector((state) => state.auth);
+  console.log(user);
   const location = useLocation();
 
   return user ? (
     <div className="w-full h-screen flex flex-col md:flex-row">
-      <div className="w-1/5 h-screen bg-white sticky top-0 hidden md:block">{/* <SideBar/> */}</div>
+      <div className="w-1/6 h-screen bg-white sticky top-0 hidden md:block">
+        <Sidebar />
+      </div>
       {/* <MobileSideBar/> */}
       <div className="flex-1 overflow-y-auto">
         {/* <NaveBar/> */}

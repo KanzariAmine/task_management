@@ -9,7 +9,16 @@
     "password": "Password",
     "email_required": "Email Address is required",
     "password_required": "Password is required",
-    "placeholder_password":"your password"
+    "placeholder_password":"your password",
+    "task_me": "TaskMe", 
+    "dashboard": "Dashboard",
+    "completed":"Completed",
+    "tasks": "Tasks",
+    "in_progress": "In Progress",
+    "to_do": "To Do",
+    "team": "Team",
+    "trash": "Trash",
+    "setting":"Setting"
     
   }
 }

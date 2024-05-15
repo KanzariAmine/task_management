@@ -8,7 +8,16 @@
     "password": "Mot de passe",
     "email_required": "Adresse e-mail requise",
     "password_required": "Mot de passe requis",
-    "placeholder_password":"Mot de passe"
+    "placeholder_password":"Mot de passe",
+    "task_me": "Liste de Tâches",
+    "dashboard": "Tableau de bord",
+    "tasks": "Tâches",
+    "completed":"Terminé",
+    "in_progress": "En Cours",
+    "to_do": "À faire",
+    "team": "Équipe",
+    "trash": "Corbeille",
+    "setting":"Réglage"
 
   }
 }

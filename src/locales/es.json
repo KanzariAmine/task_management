@@ -8,6 +8,16 @@
     "password": "Contraseña",
     "email_required": "Se requiere una dirección de correo electrónico",
     "password_required": "Se requiere contraseña",
-    "placeholder_password":"Contraseña"
+    "placeholder_password":"Contraseña",
+    "task_me": "Mi gestor de Tareas",
+    "dashboard": "Tablero de control",
+    "tasks": "Tareas",
+    "completed":"Completado",
+    "in_progress": "En progreso",
+    "to_do": "Por hacer",
+    "team": "Equipo",
+    "trash": "Basura",
+    "setting":"Ajuste"
+
   }
 }
