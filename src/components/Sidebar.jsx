@@ -38,7 +38,7 @@ const linkData = [
     icon: <FaUsers />,
   },
   {
-    label: 'Trash',
+    label: 'trash',
     link: 'trashed',
     icon: <FaTrashAlt />,
   },

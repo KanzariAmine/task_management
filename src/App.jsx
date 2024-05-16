@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+import Navbar from '@components/Navbar';
 import Sidebar from '@components/Sidebar';
 import Dashboard from '@pages/Dashboard';
 import Login from '@pages/Login';
@@ -22,7 +23,7 @@ function Layout() {
       </div>
       {/* <MobileSideBar/> */}
       <div className="flex-1 overflow-y-auto">
-        {/* <NaveBar/> */}
+        <Navbar />
         <div className="p-4 2xl:px-10">
           <Outlet />
         </div>
