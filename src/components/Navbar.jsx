@@ -1,3 +1,8 @@
+/* eslint-disable import/no-unresolved */
+
+// !Implement All the Functionality in avatar Menu
+
+import NotificationPanel from '@components/NotificationPanel';
 import { MdMenu, MdOutlineSearch } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { setOpenSidebar } from '../redux/slices/authSlice';
@@ -23,7 +28,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex gap-2 items-center">
-        {/* <NotificationPanel/> */}
+        <NotificationPanel />
 
         <UserAvatar />
       </div>
