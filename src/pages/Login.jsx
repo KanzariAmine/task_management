@@ -11,8 +11,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const { user } = useSelector((state) => state.auth);
-  console.log('USER', user);
-
   const {
     register,
     handleSubmit,

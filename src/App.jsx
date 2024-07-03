@@ -105,7 +105,7 @@ function App() {
           <Route path="/trashed" element={<Trash />} />
           <Route path="/task/:id" element={<TaskDetails />} />
         </Route>
-        <Route path="/login-in" element={<Login />} />
+        <Route path="/log-in" element={<Login />} />
       </Routes>
       <Toaster richColors />
     </main>
