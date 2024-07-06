@@ -6,6 +6,7 @@ import { IoMdAdd } from 'react-icons/io';
 import { MdAttachFile, MdKeyboardArrowDown, MdKeyboardArrowUp, MdKeyboardDoubleArrowUp } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import { BGS, formatDate, PRIOTITYSTYELS, TASK_TYPE } from '../utils';
+import AddSubTask from './AddSubTask';
 import TaskDialog from './TaskDialog';
 import UserInfo from './UserInfo';
 const ICONS = {
@@ -96,7 +97,7 @@ const TaskCard = ({ task }) => {
           </button>
         </div>
       </div>
-      {/* <AddSubTask open={open} setOpen={setOpen} id={task._id} /> */}
+      <AddSubTask open={open} setOpen={setOpen} id={task._id} />
     </>
   );
 };
