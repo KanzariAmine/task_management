@@ -2,6 +2,7 @@ import clsx from 'clsx';
 
 // eslint-disable-next-line no-undef
 const Textbox = React.forwardRef(({ type, placeholder, label, className, register, name, error }, ref) => {
+  console.log(register);
   return (
     <div className="w-full flex flex-col gap-1">
       {label && (

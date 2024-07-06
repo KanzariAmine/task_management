@@ -1,6 +1,8 @@
 /* eslint-disable import/no-unresolved */
 import { summary } from '@assets/data';
+import AddUser from '@components/AddUser';
 import Button from '@components/Button';
+import ConfirmationDialog from '@components/Dialogs';
 import Title from '@components/Title';
 import clsx from 'clsx';
 import { useState } from 'react';
@@ -79,29 +81,33 @@ const Users = () => {
     </tr>
   );
   return (
-    <div className="w-full md:px-1 px-0 mb-6">
-      <div className="flex items-center justify-between mb-8">
-        <Title title="Team Members" />
-        <Button
-          label="Add New User"
-          icon={<IoMdAdd className="text-lg" />}
-          className="flex flex-row-reverse gap-1 items-center bg-blue-600 text-white rounded-md 2xl:py-2.5"
-          onClick={() => setOpen(true)}
-        />
-      </div>
-      <div className="bg-white px-2 md:px-4 py-4 shadow-md rounded">
-        <div className="overflow-x-auto">
-          <table className="w-full mb-5">
-            <TableHeader />
-            <tbody>
-              {summary.users?.map((user, index) => (
-                <TableRow key={index} user={user} />
-              ))}
-            </tbody>
-          </table>
+    <>
+      <div className="w-full md:px-1 px-0 mb-6">
+        <div className="flex items-center justify-between mb-8">
+          <Title title="Team Members" />
+          <Button
+            label="Add New User"
+            icon={<IoMdAdd className="text-lg" />}
+            className="flex flex-row-reverse gap-1 items-center bg-blue-600 text-white rounded-md 2xl:py-2.5"
+            onClick={() => setOpen(true)}
+          />
+        </div>
+        <div className="bg-white px-2 md:px-4 py-4 shadow-md rounded">
+          <div className="overflow-x-auto">
+            <table className="w-full mb-5">
+              <TableHeader />
+              <tbody>
+                {summary.users?.map((user, index) => (
+                  <TableRow key={index} user={user} />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+      <ConfirmationDialog open={openDialog} setOpen={setOpenDialog} onClick={deleteHandler} />
+      <AddUser open={open} setOpen={setOpen} userData={selected} key={new Date().getTime().toString()} />
+    </>
   );
 };
 
