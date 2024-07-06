@@ -6,6 +6,7 @@ import { MdAttachFile, MdKeyboardArrowDown, MdKeyboardArrowUp, MdKeyboardDoubleA
 import Button from '../components/Button';
 import UserInfo from '../components/UserInfo';
 import { BGS, PRIOTITYSTYELS, TASK_TYPE, formatDate } from '../utils';
+import ConfirmationDialog from './Dialogs';
 
 const ICONS = {
   high: <MdKeyboardDoubleArrowUp />,
@@ -102,20 +103,23 @@ const Table = ({ tasks }) => {
   );
 
   return (
-    <div>
-      <div className="bg-white  px-2 md:px-4 pt-4 pb-9 shadow-md rounded">
-        <div className="overflow-x-auto">
-          <table className="w-full ">
-            <TableHeader />
-            <tbody>
-              {tasks.map((task, index) => (
-                <TableRow key={index} task={task} />
-              ))}
-            </tbody>
-          </table>
+    <>
+      <div>
+        <div className="bg-white  px-2 md:px-4 pt-4 pb-9 shadow-md rounded">
+          <div className="overflow-x-auto">
+            <table className="w-full ">
+              <TableHeader />
+              <tbody>
+                {tasks.map((task, index) => (
+                  <TableRow key={index} task={task} />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+      <ConfirmationDialog open={openDialog} setOpen={setOpenDialog} onClick={deleteHandler} />
+    </>
   );
 };
 
