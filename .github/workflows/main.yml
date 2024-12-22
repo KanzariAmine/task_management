@@ -1,0 +1,38 @@
+name: Deploy to cPanel
+
+on:
+  push: 
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+     # Step 1: Checkout the code from GitHub
+      - name: Checkout Code 🚚
+        uses: actions/checkout@v3
+      
+      # Step 2: Install Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Use the Node.js version compatible with Vite
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies 📦
+        run: npm install
+
+      # Step 4: Build the React Vite application
+      - name: Build React App 🏗️
+        run: npm run build
+      
+      # Step 5: Deploy to cPanel
+      - name: Upload to cPanel 📂
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ftp://${{ secrets.CPANEL_SERVER }}
+          username: ${{ secrets.CPANEL_USERNAME }}
+          local-dir: dist # The build output directory created by Vite
+          server-dir: /public_html/task-manager # Target directory on your cPanel server
