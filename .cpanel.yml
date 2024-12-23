@@ -1,5 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kanpower/public_html #Add /<sub_folder> if required
+    - export DEPLOYPATH=/home/kanpower/public_html
+    - export BUILDPATH=dist
     - /bin/cp -r * $DEPLOYPATH
