@@ -1,4 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kanpower/public_html
-    - /bin/rsync -aP --exclude '.git' task_management/ ${DEPLOYPATH} --delete-after
+    - export DEPLOYPATH=/home/kanpower/public_html/
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
