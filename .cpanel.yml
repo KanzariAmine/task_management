@@ -1,6 +1,8 @@
----
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export BUILDPATH=dist
-    - /bin/cp -r * $DEPLOYPATH
+    - npm install # Install dependencies
+    - npm run build # Build the project
+    - /bin/cp -r dist/* $DEPLOYPATH # Copy build files to public_html
+    - /bin/find $DEPLOYPATH -type d -exec chmod 755 '{}' \;
+    - /bin/find $DEPLOYPATH -type f -exec chmod 644 '{}' \;
