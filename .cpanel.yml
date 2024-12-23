@@ -1,5 +1,5 @@
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kanpower/public_html/
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
+    - export DEPLOYPATH=/home/kanpower/public_html #Add /<sub_folder> if required
+    - /bin/cp -r * $DEPLOYPATH
