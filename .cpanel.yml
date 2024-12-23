@@ -1,11 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kanpower/public_html
-    - export REPOPATH=/home/kanpower/task_management
-    - /bin/rm -Rf ${DEPLOYPATH}_old
-    - /bin/cp -R ${DEPLOYPATH} ${DEPLOYPATH}_old
-    - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
-    - /bin/chmod 755 ${DEPLOYPATH}
-    - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
-    - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;
-
+    - /bin/rsync -aP --exclude '.git' task_management/ ${DEPLOYPATH} --delete-after
